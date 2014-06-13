@@ -16,4 +16,4 @@ Feature: Search Google for data
 
     Given Data has been returned from my search
     When I access a returned item
-    Then I am able see the title and summary
+    Then I am able see the title and summary     asdasd
