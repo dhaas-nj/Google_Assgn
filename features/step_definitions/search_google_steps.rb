@@ -27,6 +27,7 @@ end
 
 When(/^I access a returned item$/) do
   on(ResultsPage).get_a_result
+  puts "Results were obtained"
 end
 
 Then(/^I am able see the title and summary$/) do
