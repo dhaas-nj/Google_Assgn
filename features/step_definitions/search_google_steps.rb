@@ -32,6 +32,7 @@ end
 
 Then(/^I am able see the title and summary$/) do
   on(ResultsPage).verify_title
+  puts "What is summary"
 end
 
 
