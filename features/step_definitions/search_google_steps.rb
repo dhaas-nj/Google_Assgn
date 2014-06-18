@@ -33,15 +33,9 @@ When(/^Data has been returned from my search$/) do
 end
 
 
-And(/^I access a returned item$/) do
-  on(ResultsPage).get_a_result
-
-end
-
 
 Then(/^I am able see the title and summary$/) do
-  on(ResultsPage).verify_title
-
+  expect(on(ResultsPage).gather_results[0][:title].downcase).to include "hokie"
 end
 
 

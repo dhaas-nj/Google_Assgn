@@ -17,5 +17,4 @@ Feature: Search Google for data
 Scenario: I want to see the title and summary for each search result
 
     When Data has been returned from my search
-    And I access a returned item
     Then I am able see the title and summary
