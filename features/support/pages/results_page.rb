@@ -10,24 +10,31 @@ include PageObject
 # link(:your_name, :id => 'an_id')
   link(:first_result_title) {first_result_element.link_element}
 
-  divs(:search_results, :class => "rc")
+  div(:result_stat, :id => "resultStats") #this is the "About xxxxx results" into stating how many items were returned
+  divs(:search_results, :class => "rc")   #this captures all the info from one returned item
+  h3s(:title_info, :class => "r")       #this is the highlighted hyperlink title of the returned item
+  divs(:summary_info, :class => "s")    #this is the summary of the returned item, minus the title (see above)
 
 
 
   def gather_results
-    search_results_elements
-    puts ""
-    puts search_results_elements[0].text
-    puts " "
+
+    sleep 1
+    results = {
+        :title => title_info_elements[0],
+        :summary => summary_info_elements[0]
+    }
+    p results
+
   end
 
 
   def get_a_result
-   puts "need Get a Result Code"
+
   end
 
 
   def verify_title
-    puts "need Verify Title code"
+
   end
 end
